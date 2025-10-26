@@ -162,7 +162,7 @@
             (to to)
             (amount amount)
             (transaction-type transaction-type)
-            (timestamp block-height)
+            (timestamp stacks-block-height)
             (price price)
         ))
     )
@@ -194,8 +194,8 @@
                     (project-name project-name)
                     (project-description project-description)
                     (certification-body certification-body)
-                    (certification-date block-height)
-                    (mint-date block-height)
+                    (certification-date stacks-block-height)
+                    (mint-date stacks-block-height)
                     (retirement-date u0)
                     (is-retired false)
                     (retirement-proof u"")
@@ -264,7 +264,7 @@
             (map-set carbon-nfts nft-id (merge nft-data (tuple 
                 (is-retired true)
                 (retirement-proof retirement-proof)
-                (retirement-date block-height)
+                (retirement-date stacks-block-height)
             )))
             
             ;; Update global statistics
@@ -296,7 +296,7 @@
                 (nft-id nft-id)
                 (seller tx-sender)
                 (price price)
-                (listing-date block-height)
+                (listing-date stacks-block-height)
                 (is-active true)
             ))
             
@@ -378,7 +378,7 @@
         ;; Update certification body status
         (map-set certified-bodies body (tuple
             (is-verified is-verified)
-            (verification-date block-height)
+            (verification-date stacks-block-height)
             (total-certifications u0)
         ))
         
